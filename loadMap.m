@@ -7,5 +7,5 @@ tmp = gaussC(X,Y,sigma,position(1,:));
 for i=2:length(weight)
     tmp = cat(3,tmp,gaussC(X,Y,sigma,position(i,:)));
 end
-tmp = tmp.*reshape(weight,[1,1,2]);
+tmp = tmp.*reshape(weight,[1,1,length(weight)]);
 Z = sum(tmp,3);
