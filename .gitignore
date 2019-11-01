@@ -5,5 +5,5 @@
 *.pptx
 *.pdf
 *.csv
-Icon[\r]
+Icon*
 test.m
