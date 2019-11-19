@@ -1,5 +1,6 @@
-function [ax_surf,ax] = monitor(n,pin)
+function [ax_surf,ax] = monitor(pin)
 % create subplot
+n = length(pin);
 tmp=[];
 for i=1:n
     for j=1:fix(n/2)

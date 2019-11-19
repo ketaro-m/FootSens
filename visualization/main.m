@@ -20,7 +20,7 @@ y = -10:0.1:10;
 n = length(pin);
 data = cell(n,1);
 figure('units','normalized','outerposition',[.05 .05 .75 .9]);
-[ax_surf,ax] = monitor(n,pin);
+[ax_surf,ax] = monitor(pin);
 frame = 1;
 clear F
 pause(3)
