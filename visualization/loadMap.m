@@ -1,4 +1,4 @@
-function Z = loadMap(X,Y,weight,position,sigma)
+function Z = loadMap(X,Y,weight,position,sigma,ROI)
 if length(weight)~=size(position,1)
     msg = 'Invalid input size.';
     error(msg)
@@ -9,3 +9,4 @@ for i=2:length(weight)
 end
 tmp = tmp.*reshape(weight,[1,1,length(weight)]);
 Z = sum(tmp,3);
+Z = Z.*flipud(ROI);
