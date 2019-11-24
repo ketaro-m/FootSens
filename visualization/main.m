@@ -1,6 +1,7 @@
 pin = {'A0','A1'}; %used pins
-position = [0,6;0,-6]; %pins' positions
+position = [0,4.5;-1,-6]; %pins' positions
 sigma = 2; %pressure dispersion
+load(footROI);
 
 prompt = {'Save file name (.avi):','Measurement time:'};
 dlgtitle = 'Input';
@@ -19,14 +20,14 @@ y = -10:0.1:10;
 [X,Y] = meshgrid(x,y);
 n = length(pin);
 data = cell(n,1);
-figure('units','normalized','outerposition',[.05 .05 .75 .9]);
+figure('units','normalized','outerposition',[.1 .05 .6 .9]);
 [ax_surf,ax] = monitor(pin);
 frame = 1;
 clear F
 pause(3)
 while(frame<=interv)
     weight = get_value(bt,length(pin)); %receive data
-    surf(ax_surf,X,Y,loadMap(X,Y,weight,position,sigma),'FaceAlpha',0.5)
+    surf(ax_surf,X,Y,loadMap(X,Y,weight,position,sigma,ROI),'FaceAlpha',0.5)
     colormap(ax_surf,jet)
     colorbar(ax_surf)
     xticks(ax_surf,[])
