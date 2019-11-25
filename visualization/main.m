@@ -1,8 +1,10 @@
-pin = {'A0','A1'}; %used pins
-position = [0,4.5;-1,-6]; %pins' positions
-sigma = 2; %pressure dispersion
-load(footROI);
+%Input parameters
+pin = {'A0','A1'}; %pin numbers
+position = [0,4.5;0.2,-6]; %pins' positions
+sigma = 1.5; %pressure dispersion
+%
 
+load('footROI');
 prompt = {'Save file name (.avi):','Measurement time:'};
 dlgtitle = 'Input';
 dims = [1 50];
