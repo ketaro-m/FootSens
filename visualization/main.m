@@ -48,6 +48,7 @@ while(time<=interv)
         title(ax{i},pin{i},'Interpreter','latex')
         xlabel(ax{i},'time [sec]','Interpreter','latex');
         ylabel(ax{i},'Force [kg]','Interpreter','latex');
+        yticks(ax{i},linspace(0,10,11))
         xticks(ax{i},linspace(0,fix(time)*frame/time,fix(time)+1))
         xticklabels(ax{i},ax{i}.XTick*time/frame)
         xlim(ax{i},[frame-frame/time*monitorRange frame])
