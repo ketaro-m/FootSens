@@ -1,6 +1,6 @@
 %Input parameters
 pin = {'A0','A1'};              %pin numbers
-position = [0,4.5;0.2,-6];      %pins' positions
+position = [-1,4.5;0.2,-6];      %pins' positions
 sigma = 1.5;                    %pressure dispersion
 monitorRange = 10;              %time range of the monitor [sec]
 %
@@ -37,7 +37,7 @@ while(time<=interv)
     colorbar(ax_surf)
     xticks(ax_surf,[])
     yticks(ax_surf,[])
-    caxis(ax_surf,[0,8])
+    caxis(ax_surf,[0,10])
     zlim(ax_surf,[0,10])
     view(ax_surf,2)
     title(ax_surf,'Heat Map','Interpreter','latex')
