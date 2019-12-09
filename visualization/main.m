@@ -28,7 +28,7 @@ figure('units','normalized','outerposition',[.1 .05 .6 .9]);
 frame = 1;
 time = 0;
 clear F
-pause(3)
+pause(1)
 tic;
 while(time<=interv)
     weight = get_value(bt,length(pin)); %receive data
@@ -37,7 +37,7 @@ while(time<=interv)
     colorbar(ax_surf)
     xticks(ax_surf,[])
     yticks(ax_surf,[])
-    caxis(ax_surf,[0,10])
+    caxis(ax_surf,[0,8])
     zlim(ax_surf,[0,10])
     view(ax_surf,2)
     title(ax_surf,'Heat Map','Interpreter','latex')
