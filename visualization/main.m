@@ -1,6 +1,6 @@
 %Input parameters
 pin = {'A0','A1'};              %pin numbers
-position = [0,4.5;0.2,-6];      %pins' positions
+position = [-1,4.5;0.2,-6];      %pins' positions
 sigma = 1.5;                    %pressure dispersion
 monitorRange = 10;              %time range of the monitor [sec]
 %
@@ -28,7 +28,7 @@ figure('units','normalized','outerposition',[.1 .05 .6 .9]);
 frame = 1;
 time = 0;
 clear F
-pause(3)
+pause(1)
 tic;
 while(time<=interv)
     weight = get_value(bt,length(pin)); %receive data
