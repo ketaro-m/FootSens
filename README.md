@@ -40,11 +40,11 @@ If you successfully open the bluetooth, move to the directory in which "main.m" 
 ```
 >> main
 ```
-Then input a file name and measurement time into a dialog showing up, and click enter key.
+Then input a file name and measurement time into a dialog showing up, and click "OK".
 <img width="300" alt="inputDialog.png" src="https://github.com/ketaro-m/foot_sensor/blob/master/img/inputDialog.png">
 
 In a few seconds, LED on the device will turn on and the measurement will start.  
-You can monitor the tracknig in real time and in addition the monitor will be saved as an avi file in the same directory after finishing.
+You can monitor the tracknig in real time and the monitor will be saved as an avi file in the same directory.
 
 ## Demo
 <img width="400" alt="demo.gif" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/505262/31ee205e-98d5-f615-a16e-a843d6219071.gif">
